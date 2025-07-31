@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>麻雀精算ツール</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <button class="tab-button active" data-tab="main-page">メイン</button>
+            <button class="tab-button" data-tab="settings-page">設定</button>
+        </div>
+
+        <div id="main-page" class="tab-content active">
+            <div id="player-inputs"></div>
+            <datalist id="user-list"></datalist>
+
+            <div class="input-group rate-group">
+                <label>レート</label>
+                <input type="number" id="rate-point" placeholder="点"> 点
+                <span>=</span>
+                <input type="number" id="rate-yen" placeholder="円"> 円
+            </div>
+
+            <div class="input-group checkbox-group">
+                <input type="checkbox" id="sanma-checkbox">
+                <label for="sanma-checkbox">4人麻雀の際、3位が2位に支払う</label>
+            </div>
+            
+            <button id="send-button">送信</button>
+        </div>
+
+        <div id="settings-page" class="tab-content">
+            <div class="input-group">
+                <label for="gas-api-url">GASウェブアプリURL</label>
+                <input type="url" id="gas-api-url" placeholder="https://script.google.com/macros/s/...">
+            </div>
+            <div class="input-group">
+                <label for="webhook-url">Discord Webhook URL</label>
+                <input type="url" id="webhook-url" placeholder="https://discord.com/api/webhooks/...">
+            </div>
+            <hr>
+            <h4>ユーザー登録 (最大10名)</h4>
+            <div id="user-settings"></div>
+            <button id="save-settings-button">設定を保存</button>
+        </div>
+
+        <div id="message-area"></div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>

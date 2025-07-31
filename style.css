@@ -1,0 +1,136 @@
+body {
+    font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+    width: 380px;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+padding: 15px;
+}
+
+.tabs {
+display: flex;
+border-bottom: 2px solid #ccc;
+margin-bottom: 15px;
+}
+.tab-button {
+padding: 10px 15px;
+cursor: pointer;
+border: none;
+background-color: transparent;
+font-size: 16px;
+color: #555;
+border-bottom: 3px solid transparent;
+}
+.tab-button.active {
+color: #007bff;
+border-bottom-color: #007bff;
+}
+.tab-content {
+display: none;
+}
+.tab-content.active {
+display: block;
+}
+
+.input-group {
+margin-bottom: 12px;
+}
+.input-group label {
+display: block;
+margin-bottom: 5px;
+font-weight: bold;
+color: #333;
+}
+input[type="text"], input[type="number"], input[type="url"] {
+width: calc(100% - 20px);
+padding: 8px 10px;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 14px;
+}
+
+.player-row {
+display: flex;
+gap: 10px;
+margin-bottom: 8px;
+align-items: center;
+}
+.player-row input[list="user-list"] {
+flex-grow: 1;
+}
+.player-row input[type="number"] {
+width: 100px;
+}
+
+.rate-group {
+display: flex;
+align-items: center;
+gap: 8px;
+}
+.rate-group input {
+width: 80px;
+}
+.checkbox-group {
+display: flex;
+align-items: center;
+}
+.checkbox-group input {
+margin-right: 8px;
+}
+
+#user-settings {
+margin-bottom: 15px;
+}
+.user-setting-row {
+display: flex;
+gap: 10px;
+margin-bottom: 8px;
+}
+.user-setting-row input[placeholder="ユーザー名"] {
+flex-basis: 40%;
+}
+.user-setting-row input[placeholder="DiscordユーザーID"] {
+flex-basis: 60%;
+}
+
+button {
+width: 100%;
+padding: 12px;
+font-size: 16px;
+font-weight: bold;
+color: #fff;
+background-color: #007bff;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.2s;
+}
+button:hover {
+background-color: #0056b3;
+}
+button:disabled {
+background-color: #ccc;
+cursor: not-allowed;
+}
+
+#message-area {
+margin-top: 15px;
+padding: 10px;
+border-radius: 5px;
+text-align: center;
+font-weight: bold;
+display: none; /* 初期状態は非表示 \*/
+}
+#message-area.success {
+background-color: #d4edda;
+color: #155724;
+display: block;
+}
+#message-area.error {
+background-color: #f8d7da;
+color: #721c24;
+display: block;
+}

@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "麻雀精算ツール",
+  "version": "1.0",
+  "description": "麻雀の収支を計算し、スプレッドシートに記録・Discordに通知します。",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://script.google.com/"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
